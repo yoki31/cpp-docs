@@ -1,7 +1,7 @@
 ---
 title: "Welcome back to C++ - Modern C++"
 description: "Describes the new programming idioms in Modern C++ and their rationale."
-ms.date: 09/07/2021
+ms.date: 02/07/2022
 ms.topic: "conceptual"
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
 ---
@@ -75,7 +75,7 @@ Don’t use C-style arrays. For older APIs that need direct access to the data, 
 
 ## Standard Library algorithms
 
-Before you assume that you need to write a custom algorithm for your program, first review the C++ Standard Library [algorithms](../standard-library/algorithm.md). The Standard Library contains an ever-growing assortment of algorithms for many common operations such as searching, sorting, filtering, and randomizing. The math library is extensive. Starting in C++17, parallel versions of many algorithms are provided.
+Before you assume that you need to write a custom algorithm for your program, first review the C++ Standard Library [algorithms](../standard-library/algorithm.md). The Standard Library contains an ever-growing assortment of algorithms for many common operations such as searching, sorting, filtering, and randomizing. The math library is extensive. In C++17 and later, parallel versions of many algorithms are provided.
 
 Here are some important examples:
 
@@ -95,7 +95,7 @@ auto comp = [](const widget& w1, const widget& w2)
 
 sort( v.begin(), v.end(), comp );
 
-auto i = lower_bound( v.begin(), v.end(), comp );
+auto i = lower_bound( v.begin(), v.end(), widget{0}, comp );
 ```
 
 ## `auto` instead of explicit type names
@@ -185,7 +185,7 @@ Modern C++ provides *move semantics*, which make it possible to eliminate unnece
 
 ## Lambda expressions
 
-In C-style programming, a function can be passed to another function by using a *function pointer*. Function pointers are inconvenient to maintain and understand. The function they refer to may be defined elsewhere in the source code, far away from the point at which it's invoked. Also, they're not type-safe. Modern C++ provides *function objects*, classes that override the [`operator()`](function-call-operator-parens.md) operator, which enables them to be called like a function. The most convenient way to create function objects is with inline [lambda expressions](../cpp/lambda-expressions-in-cpp.md). The following example shows how to use a lambda expression to pass a function object, that the `for_each` function will invoke on each element in the vector:
+In C-style programming, a function can be passed to another function by using a *function pointer*. Function pointers are inconvenient to maintain and understand. The function they refer to may be defined elsewhere in the source code, far away from the point at which it's invoked. Also, they're not type-safe. Modern C++ provides *function objects*, classes that override the [`operator()`](function-call-operator-parens.md) operator, which enables them to be called like a function. The most convenient way to create function objects is with inline [lambda expressions](../cpp/lambda-expressions-in-cpp.md). The following example shows how to use a lambda expression to pass a function object, that the `find_if` function will invoke on each element in the vector:
 
 ```cpp
     std::vector<int> v {1,2,3,4,5};

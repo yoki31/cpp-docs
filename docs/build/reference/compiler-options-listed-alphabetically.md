@@ -111,6 +111,7 @@ This table contains an alphabetical list of compiler options. For a list of comp
 | [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | Forces parameters passed in registers to be written to their locations on the stack upon function entry. This compiler option is only for the x64 compilers (native and cross compile). |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | Creates a hotpatchable image. |
 | [`/I<dir>`](i-additional-include-directories.md) | Searches a directory for include files. |
+| **`/ifcOutput`** | Specify output file or directory for *`.ifc`* files. |
 | [`/J`](j-default-char-type-is-unsigned.md) | Changes the default **`char`** type. |
 | [`/JMC`](jmc.md) | Supports native C++ Just My Code debugging. |
 | [`/kernel`](kernel-create-kernel-mode-binary.md) | The compiler and linker will create a binary that can be executed in the Windows kernel. |
@@ -159,6 +160,7 @@ This table contains an alphabetical list of compiler options. For a list of comp
 | [`/RTCc`](rtc-run-time-error-checks.md) | Convert to smaller type checks at run-time. |
 | [`/RTCs`](rtc-run-time-error-checks.md) | Enable stack frame runtime checks. |
 | [`/RTCu`](rtc-run-time-error-checks.md) | Enables uninitialized local usage checks. |
+| [`/scanDependencies`](scandependencies.md) | List module dependencies in C++ Standard JSON form. |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | Enable additional security features and warnings. |
 | [`/showIncludes`](showincludes-list-include-files.md) | Displays a list of all include files during compilation. |
 | [`/source-charset`](source-charset-set-source-character-set.md) | Set source character set. |

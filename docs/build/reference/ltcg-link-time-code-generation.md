@@ -12,18 +12,18 @@ Use **`/LTCG`** to perform whole-program optimization, or to create profile-guid
 
 ## Syntax
 
-> **`/LTCG`**[**`:`**{**`INCREMENTAL`**|**`NOSTATUS`**|**`STATUS`**|**`OFF`**}]
+> **`/LTCG`**[**`:`**{**`INCREMENTAL`**\|**`NOSTATUS`**\|**`STATUS`**\|**`OFF`**}]
 
 These options are deprecated starting in Visual Studio 2015:
 
-> **`/LTCG:`**{**`PGINSTRUMENT`**|**`PGOPTIMIZE`**|**`PGUPDATE`**}
+> **`/LTCG:`**{**`PGINSTRUMENT`**\|**`PGOPTIMIZE`**\|**`PGUPDATE`**}
 
 ### Arguments
 
 **`INCREMENTAL`**<br/>
 (Optional) Specifies that the linker only applies whole program optimization or link-time code generation (LTCG) to files affected by an edit, instead of the entire project. By default, this flag isn't set when **`/LTCG`** is specified, and the entire project is linked by using whole program optimization.
 
-**`NOSTATUS`** &#124; **`STATUS`**<br/>
+**`NOSTATUS`** \| **`STATUS`**<br/>
 (Optional) Specifies whether the linker displays a progress indicator that shows what percentage of the link is complete. By default, this status information isn't displayed.
 
 **`OFF`**<br/>
@@ -124,7 +124,7 @@ Modules that are compiled by using [`/GL`](gl-whole-program-optimization.md) and
 
 ### To set this compiler option in the Visual Studio development environment
 
-1. Open the project **Property Pages** dialog box. See [Set C++ compiler and build properties in Visual Studio](../working-with-project-properties.md).
+1. Open the project **Property Pages** dialog box. For more information, see [Set compiler and build properties](../working-with-project-properties.md).
 
 1. Select the **Configuration Properties** > **General** property page.
 
